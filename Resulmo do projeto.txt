@@ -1,0 +1,70 @@
+estopu montandando um vpc no digitalocean, vou fazer Deploy em Servidor do zero (NextJS + Github + PM2 + Nginx + SSL + DigitalOcean)
+IPv4: 104.248.3.210 
+IPv6:  2604:a880:800:14::4135:4000
+IP privado:  10.108.0.2
+
+neste momento so que que veja os primerios comando que eu pedir e vamos com calma pois eu não so programador e tenho pouca experiencia em servidor 
+
+compando par ainstalar o postgre no terminal 
+
+ipv4: 104.248.3.210 Copy
+ipv6:  2604:a880:800:14::4135:4000Copy
+Private IP:  10.108.0.2 Copy
+Reserved IP:  Enable now
+Console:
+
+DATABASE meueventocatolico;
+USER postgres;
+PASSWORD '2707';
+
+
+Projeto: Plataforma de Gestão de Eventos Católicos
+Objetivo Principal:
+Uma plataforma web para gerenciar eventos católicos, permitindo diferentes tipos de eventos (presenciais, online, híbridos e cursos em vídeo).
+Principais Funcionalidades:
+Gestão de Usuários
+3 tipos de perfis: admin, organizador e usuário comum
+Sistema de autenticação completo
+Gerenciamento de perfil
+Gestão de Eventos
+Múltiplos tipos de eventos (presencial, online, híbrido, curso-vídeo)
+Categorias diversas (shows, cursos, workshops, etc)
+Sistema de lotes de ingressos
+Localização e detalhes do evento
+Sistema de Pagamentos
+Múltiplas formas de pagamento (cartão, PIX, transferência)
+Gestão de lotes e preços
+Taxas de serviço configuráveis
+Integrações
+WhatsApp para comunicação automatizada
+OpenAI para geração de descrições
+Webhooks para notificações
+API e Backend
+Integração com N8N para automações
+Sistema de mock data para desenvolvimento
+Tratamento de erros robusto
+Tecnologias Principais:
+Frontend: React + TypeScript
+Estilização: TailwindCSS
+Formulários: React Hook Form + Zod
+HTTP Client: Axios
+Automação: N8N
+Arquitetura:
+Frontend componentizado
+Tipagem forte com TypeScript
+Sistema de rotas com React Router
+Gestão de estado com Context API
+Validação de formulários com Zod
+Fluxos Principais:
+1. Organizador cria evento
+Usuários se inscrevem
+Sistema gerencia pagamentos
+4. Notificações automáticas via WhatsApp
+Gestão de presença e certificados
+Em Desenvolvimento:
+Sistema de templates para páginas de eventos
+Integração com meios de pagamento
+Dashboard administrativo
+Sistema de relatórios
+O projeto está estruturado de forma modular, permitindo fácil manutenção e escalabilidade. O código segue boas práticas de TypeScript e React, com forte tipagem e componentes reutilizáveis.
+Quer que eu detalhe alguma parte específica do projeto?
