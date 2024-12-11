@@ -1,22 +1,20 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'dist', // Define o diretório de saída do build
-    emptyOutDir: true, // Limpa o diretório antes de um novo build
-  },
-  optimizeDeps: {
-    exclude: ['lucide-react'], // Exclusão específica que você configurou
-  },
-  resolve: {
-    alias: {
-      '@': '/src', // Atalho para o diretório "src"
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+      },
     },
   },
-  server: {
-    port: 3000, // Configuração opcional do servidor local
+  optimizeDeps: {
+    exclude: ['lucide-react'],
   },
-  base: './', // Define um caminho base relativo para suportar Vercel
 });
