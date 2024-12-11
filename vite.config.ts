@@ -1,20 +1,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-        assetFileNames: 'assets/[name]-[hash][extname]',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-      },
+    outDir: 'dist', // Diretório de saída do build
+    emptyOutDir: true,
+  },
+  resolve: {
+    alias: {
+      '@': '/src',
     },
   },
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
+  base: './', // Define um caminho base relativo para assets
 });
